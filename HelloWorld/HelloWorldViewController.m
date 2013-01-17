@@ -9,10 +9,17 @@
 #import "HelloWorldViewController.h"
 
 @interface HelloWorldViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+- (IBAction)changeGreeting:(id)sender;
 
 @end
 
 @implementation HelloWorldViewController
+@synthesize label;
+@synthesize textField;
+
+
 
 - (void)viewDidLoad
 {
@@ -22,6 +29,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTextField:nil];
+    [self setLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -31,4 +40,6 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+- (IBAction)changeGreeting:(id)sender {
+}
 @end
