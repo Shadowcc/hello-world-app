@@ -66,6 +66,7 @@
     if (theTextField == self.textField) {
         
         [theTextField resignFirstResponder];
+        [self changeGreeting:self];
         
     }
     
